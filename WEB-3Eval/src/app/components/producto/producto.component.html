@@ -1,0 +1,102 @@
+<div class="container py-5">
+
+  <!-- Loading -->
+  <div *ngIf="cargando" class="text-center py-5">
+    <div class="spinner-border" style="color:#e63946; width:3rem; height:3rem;" role="status"></div>
+    <p class="mt-3 text-muted">Cargando producto...</p>
+  </div>
+
+  <!-- No encontrado -->
+  <div *ngIf="!cargando && !producto" class="text-center py-5">
+    <p class="fs-1">🔍</p>
+    <h3 class="fw-bold">Producto no encontrado</h3>
+    <p class="text-muted">El producto que buscas no existe en nuestro catálogo.</p>
+    <a routerLink="/catalogo" class="btn btn-rtm px-4 mt-2 rounded-pill">← Volver al catálogo</a>
+  </div>
+
+  <!-- Detalle del producto -->
+  <div *ngIf="!cargando && producto">
+
+    <a routerLink="/catalogo" class="btn btn-outline-secondary mb-4 rounded-pill px-4">
+      ← Volver al catálogo
+    </a>
+
+    <div class="row g-4 align-items-start">
+
+      <!-- Imagen -->
+      <div class="col-md-6">
+        <div class="img-detalle-wrapper rounded-4 overflow-hidden shadow">
+          <img [src]="producto.imagen" [alt]="producto.nombre"
+               class="img-fluid w-100 img-detalle" />
+        </div>
+        <span class="badge mt-3 px-3 py-2 fs-6"
+              [ngClass]="getBadgeClass(producto.categoria)">
+          {{ producto.categoria }}
+        </span>
+      </div>
+
+      <!-- Info -->
+      <div class="col-md-6">
+        <p class="text-muted mb-1 fw-semibold text-uppercase small">
+          {{ producto.marca }}
+        </p>
+        <h1 class="fw-bold display-6 mb-2">{{ producto.nombre }}</h1>
+
+        <!-- Estrellas -->
+        <div class="d-flex align-items-center gap-1 mb-3">
+          <span *ngFor="let s of getEstrellas(producto.rating)"
+                [class]="s === 1 ? 'text-warning fs-5' : 'text-secondary fs-5'">
+            {{ s === 1 ? '★' : '☆' }}
+          </span>
+          <span class="text-muted ms-2">({{ producto.rating }} / 5)</span>
+        </div>
+
+        <p class="fs-5 text-muted mb-4">{{ producto.descripcion }}</p>
+
+        <!-- Detalles -->
+        <ul class="list-group list-group-flush mb-4">
+          <li class="list-group-item d-flex justify-content-between px-0 py-2">
+            <span class="text-muted">👤 Edad recomendada</span>
+            <strong>{{ producto.edad }}</strong>
+          </li>
+          <li class="list-group-item d-flex justify-content-between px-0 py-2">
+            <span class="text-muted">📦 Stock disponible</span>
+            <strong [class.text-danger]="producto.stock < 15"
+                    [class.text-success]="producto.stock >= 15">
+              {{ producto.stock }} unidades
+            </strong>
+          </li>
+          <li class="list-group-item d-flex justify-content-between px-0 py-2">
+            <span class="text-muted">🏷️ Categoría</span>
+            <strong>{{ producto.categoria }}</strong>
+          </li>
+        </ul>
+
+        <!-- Precio + cantidad -->
+        <div class="d-flex align-items-center gap-4 mb-4">
+          <span class="fs-1 fw-bold" style="color:#e63946;">${{ producto.precio }}</span>
+          <div class="d-flex align-items-center border rounded-pill overflow-hidden">
+            <button class="btn btn-light px-3 py-2 border-0" (click)="cambiarCantidad(-1)">−</button>
+            <span class="px-3 fw-bold">{{ cantidad }}</span>
+            <button class="btn btn-light px-3 py-2 border-0" (click)="cambiarCantidad(1)">+</button>
+          </div>
+        </div>
+
+        <!-- Alerta éxito -->
+        <div *ngIf="agregado" class="alert alert-success py-2 rounded-pill text-center" role="alert">
+          🛒 ¡{{ cantidad }} unidad(es) agregada(s) al carrito!
+        </div>
+
+        <!-- Botón carrito -->
+        <div class="d-grid">
+          <button class="btn btn-rtm btn-lg rounded-pill fw-bold"
+                  (click)="agregarAlCarrito()"
+                  [disabled]="agregado">
+            {{ agregado ? '✓ Agregado al carrito' : '🛒 Agregar al carrito' }}
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

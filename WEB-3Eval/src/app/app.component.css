@@ -1,0 +1,24 @@
+:root {
+  --rtm-primary: #e63946;
+  --rtm-dark: #1a1a2e;
+  --rtm-accent: #f4a261;
+}
+
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar .nav-link.active {
+  color: #f4a261 !important;
+  font-weight: 600;
+}
+
+.navbar .nav-link:hover {
+  color: #f4a261 !important;
+}
+.nav-link.active {
+  color: #f4a261 !important;
+  font-weight: 600;
+  pointer-events: none;
+}

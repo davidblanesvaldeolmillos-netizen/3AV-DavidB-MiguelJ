@@ -1,0 +1,58 @@
+.hero-banner {
+  background: linear-gradient(135deg, #1a1a2e 0%, #e63946 100%);
+  border-radius: 0 0 40px 40px;
+}
+
+.filtro-btn {
+  border: 2px solid #dee2e6;
+  background: #fff;
+  color: #555;
+  border-radius: 50px;
+  transition: all 0.2s;
+}
+
+.filtro-btn:hover,
+.filtro-btn.active {
+  background-color: #e63946;
+  border-color: #e63946;
+  color: #fff;
+}
+
+.producto-card {
+  border-radius: 16px !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+}
+
+.producto-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(230, 57, 70, 0.18) !important;
+}
+
+.img-wrapper {
+  height: 210px;
+}
+
+.producto-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.producto-card:hover .producto-img {
+  transform: scale(1.07);
+}
+
+.btn-rtm {
+  background-color: #e63946;
+  border: none;
+  color: #fff;
+  border-radius: 50px;
+  transition: background 0.2s;
+}
+
+.btn-rtm:hover {
+  background-color: #c1121f;
+  color: #fff;
+}

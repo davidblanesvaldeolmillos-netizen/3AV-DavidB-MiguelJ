@@ -1,0 +1,9 @@
+<div class="flex-shrink-0 p-3 bg-dark" data-bs-theme="dark">
+  <a href="/" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
+  <span class="fs-5 fw-semibold">APIs Menu</span> </a>
+  <ul class="list-unstyled ps-0 ">
+    @for (link of links; track link.url){
+      <li class="mb-1"><a routerLink="{{link.url}}" routerLinkActive="active">{{link.nombre}}</a></li>
+    }
+  </ul>
+</div>

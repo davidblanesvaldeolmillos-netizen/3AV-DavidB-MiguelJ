@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #1a1a2e;">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold fs-4" routerLink="/catalogo">
+      <img src="assets/logo.png" alt="Logo" width="36" height="36"
+           onerror="this.style.display='none'"
+           class="rounded-circle" />
+      🧸 Re-ToyMake
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navMenu" aria-controls="navMenu"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto gap-2">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            🏠 Inicio
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/catalogo" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            🏪 Catálogo
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="text-white text-center py-4 mt-5" style="background-color: #1a1a2e;">
+  <div class="container">
+    <p class="mb-1 fw-bold fs-5">🧸 Re-ToyMake</p>
+    <p class="mb-0 text-secondary small">
+      Juguetes para todas las edades — Niños · Jóvenes · Adultos · Atletas · Mascotas
+    </p>
+    <p class="mt-2 text-secondary small">© 2025 Re-ToyMake. Todos los derechos reservados.</p>
+  </div>
+</footer>

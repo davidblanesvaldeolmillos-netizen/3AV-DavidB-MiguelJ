@@ -1,0 +1,10 @@
+<div class="container-fluid m-0 p-0 navegation">
+  <header class="d-flex justify-content-end py-3 pb-0 justify-content-between">
+    <h2 class="h2 mx-2" routerLink="/home">APIS DIRECTORY</h2>
+    <ul class="nav nav-item">
+      @for (link of links;track link.nombre){
+        <li class="nav-item mx-2 rounded-top-2"><a routerLink="{{link.url}}" routerLinkActive="active" class="nav-link">{{ link.nombre }}</a></li>
+      }
+    </ul>
+  </header>
+</div>

@@ -1,0 +1,25 @@
+.img-detalle-wrapper {
+  max-height: 460px;
+}
+
+.img-detalle {
+  height: 460px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.img-detalle-wrapper:hover .img-detalle {
+  transform: scale(1.03);
+}
+
+.btn-rtm {
+  background-color: #e63946;
+  border: none;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.btn-rtm:hover {
+  background-color: #c1121f;
+  color: #fff;
+}

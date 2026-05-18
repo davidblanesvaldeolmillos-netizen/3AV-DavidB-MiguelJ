@@ -1,0 +1,24 @@
+{
+  "apisData": [
+    {
+      "id": 1,
+      "name": "Pokemon",
+      "description": "Consulta informacion de criaturas, tipos y detalles clave."
+    },
+    {
+      "id": 2,
+      "name": "Rick y Morty",
+      "description": "Description for API 2"
+    },
+    {
+      "id": 3,
+      "name": "Star Wars",
+      "description": "Descubre personajes, planetas y datos del universo galactico."
+    },
+    {
+      "id": 4,
+      "name": "Valorant",
+      "description": "Explora agentes y contenido del juego de forma rapida.."
+    }
+  ]
+}

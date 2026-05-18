@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "nombre": "LEGO City Estación Espacial",
+    "descripcion": "Set de construcción con 1200 piezas que incluye cohete, astronautas y plataforma de lanzamiento. Desarrolla creatividad y habilidades motoras en niños.",
+    "precio": 89.99,
+    "imagen": "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=500",
+    "categoria": "Niños",
+    "edad": "6-12 años",
+    "stock": 25,
+    "rating": 4.9,
+    "marca": "LEGO"
+  },
+  {
+    "id": 2,
+    "nombre": "Peluche Osito Vintage 45cm",
+    "descripcion": "Osito de peluche artesanal con relleno antialérgico, ideal para coleccionistas y adultos mayores que buscan ternura y nostalgia en cada abrazo.",
+    "precio": 34.99,
+    "imagen": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500",
+    "categoria": "Adultos Mayores",
+    "edad": "60+ años",
+    "stock": 40,
+    "rating": 4.7,
+    "marca": "Re-ToyMake"
+  },
+  {
+    "id": 3,
+    "nombre": "Balón de Entrenamiento Pro 5kg",
+    "descripcion": "Balón medicinal de alta densidad para entrenamiento funcional, CrossFit y rehabilitación física. Superficie antideslizante y resistente a impactos.",
+    "precio": 54.99,
+    "imagen": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500",
+    "categoria": "Atletas",
+    "edad": "16+ años",
+    "stock": 18,
+    "rating": 4.8,
+    "marca": "SportPro"
+  },
+  {
+    "id": 4,
+    "nombre": "Juguete Interactivo para Perros",
+    "descripcion": "Dispensador automático de premios con sensores de movimiento y 3 niveles de dificultad. Mantiene a tu perro activo y estimulado mentalmente durante horas.",
+    "precio": 29.99,
+    "imagen": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=500",
+    "categoria": "Mascotas",
+    "edad": "Todas las razas",
+    "stock": 35,
+    "rating": 4.6,
+    "marca": "PetPlay"
+  },
+  {
+    "id": 5,
+    "nombre": "Puzzle 3D Castillo Medieval 500 pzs",
+    "descripcion": "Rompecabezas tridimensional de madera premium con 500 piezas. Perfecto para jóvenes adultos que buscan un desafío mental relajante y decorativo.",
+    "precio": 44.99,
+    "imagen": "https://images.unsplash.com/photo-1611996575749-79a3a250f948?w=500",
+    "categoria": "Jóvenes",
+    "edad": "14-25 años",
+    "stock": 12,
+    "rating": 4.5,
+    "marca": "MindCraft"
+  },
+  {
+    "id": 6,
+    "nombre": "Cuerda de Saltar Velocidad Elite",
+    "descripcion": "Cuerda de saltar profesional con rodamientos de acero, mango ergonómico y cable de acero recubierto. Ideal para boxeadores, CrossFitters y atletas de alto rendimiento.",
+    "precio": 24.99,
+    "imagen": "https://images.unsplash.com/photo-1598971457999-ca4ef48a9a71?w=500",
+    "categoria": "Atletas",
+    "edad": "16+ años",
+    "stock": 50,
+    "rating": 4.9,
+    "marca": "SportPro"
+  },
+  {
+    "id": 7,
+    "nombre": "Cocinita de Juguete Madera",
+    "descripcion": "Cocina de madera sostenible con accesorios de chef incluidos, ollas, sartenes y especias de juguete. Estimula el juego simbólico y la imaginación creativa.",
+    "precio": 69.99,
+    "imagen": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=500",
+    "categoria": "Niños",
+    "edad": "3-8 años",
+    "stock": 20,
+    "rating": 4.7,
+    "marca": "WoodToys"
+  },
+  {
+    "id": 8,
+    "nombre": "Ratón de Peluche para Gatos",
+    "descripcion": "Set de 5 ratoncitos con hierba gatera natural en su interior. Textura crujiente y cascabel interno para estimular el instinto cazador de tu felino.",
+    "precio": 12.99,
+    "imagen": "https://images.unsplash.com/photo-1574158622682-e40e69881006?w=500",
+    "categoria": "Mascotas",
+    "edad": "Gatos adultos y cachorros",
+    "stock": 80,
+    "rating": 4.4,
+    "marca": "PetPlay"
+  }
+]

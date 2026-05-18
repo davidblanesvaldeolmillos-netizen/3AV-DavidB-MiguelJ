@@ -1,0 +1,29 @@
+.hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #e63946 100%);
+  border-radius: 0 0 50px 50px;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.categoria-card {
+  border-radius: 16px !important;
+  transition: transform 0.2s ease;
+  cursor: default;
+}
+
+.categoria-card:hover {
+  transform: translateY(-5px);
+}
+
+.btn-rtm {
+  background-color: #e63946;
+  border: none;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.btn-rtm:hover {
+  background-color: #c1121f;
+  color: #fff;
+}

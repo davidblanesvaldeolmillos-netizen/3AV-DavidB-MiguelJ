@@ -1,0 +1,90 @@
+<section class="hero-banner py-5 text-white text-center mb-4">
+  <div class="container">
+    <h1 class="display-4 fw-bold mb-2">🧸 Re-ToyMake</h1>
+    <p class="lead mb-0">Juguetes para cada etapa de la vida — y para tus mascotas también</p>
+  </div>
+</section>
+
+<div class="container pb-5">
+
+  <div class="d-flex flex-wrap justify-content-center gap-2 mb-4" *ngIf="!cargando && !error">
+    <button
+      *ngFor="let cat of categorias"
+      class="btn btn-sm px-3 py-2 fw-semibold filtro-btn"
+      [class.active]="categoriaActiva === cat"
+      (click)="filtrarCategoria(cat)">
+      {{ cat }}
+    </button>
+  </div>
+
+  <div *ngIf="cargando" class="text-center py-5">
+    <div class="spinner-border" style="color: #e63946; width: 3rem; height: 3rem;" role="status">
+      <span class="visually-hidden">Cargando...</span>
+    </div>
+    <p class="mt-3 text-muted fs-5">Cargando nuestros juguetes...</p>
+  </div>
+
+  <div *ngIf="error" class="alert alert-danger text-center fs-5" role="alert">
+    ❌ Error al cargar los productos. Verifica la carpeta <code>public/data/</code>.
+  </div>
+
+  <p *ngIf="!cargando && !error" class="text-muted small mb-3 text-center">
+    Mostrando {{ productosFiltrados.length }} producto(s)
+  </p>
+
+  <div *ngIf="!cargando && !error" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
+    <div class="col" *ngFor="let producto of productosFiltrados">
+      <div class="card h-100 border-0 shadow-sm producto-card">
+
+        <div class="overflow-hidden position-relative img-wrapper">
+          <img [src]="producto.imagen" [alt]="producto.nombre"
+               class="card-img-top producto-img img-fluid" />
+          <span class="badge position-absolute top-0 start-0 m-2 px-2 py-1"
+                [ngClass]="getBadgeClass(producto.categoria)">
+            {{ producto.categoria }}
+          </span>
+          <span *ngIf="producto.stock < 15"
+                class="badge bg-danger position-absolute top-0 end-0 m-2 px-2 py-1">
+            ¡Últimas!
+          </span>
+        </div>
+
+        <div class="card-body d-flex flex-column">
+          <p class="text-muted small mb-1">{{ producto.marca }}</p>
+          <h5 class="card-title fw-bold mb-1">{{ producto.nombre }}</h5>
+          <p class="card-text text-muted small flex-grow-1">
+            {{ producto.descripcion | slice:0:90 }}...
+          </p>
+
+          <div class="d-flex align-items-center gap-1 my-2">
+            <span *ngFor="let s of getEstrellasArray(producto.rating)"
+                  class="text-warning">⭐</span>
+            <span class="text-muted small ms-1">({{ producto.rating }})</span>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <span class="fs-5 fw-bold" style="color: #e63946;">${{ producto.precio }}</span>
+            <span class="text-muted small">👤 {{ producto.edad }}</span>
+          </div>
+        </div>
+
+        <div class="card-footer bg-white border-0 pb-3 px-3">
+          <a [routerLink]="['/producto', producto.id]"
+             class="btn w-100 fw-semibold btn-rtm">
+            Ver más →
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!cargando && !error && productosFiltrados.length === 0"
+       class="text-center py-5">
+    <p class="fs-4">😕 No hay productos en esta categoría.</p>
+    <button class="btn btn-rtm mt-2" (click)="filtrarCategoria('Todos')">
+      Ver todos
+    </button>
+  </div>
+
+</div>
